@@ -1,93 +1,324 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Full Stack Developer | Portfolio</title>
-    <link rel="stylesheet" href="assets/css/styles.css" />
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-    <script src="assets/js/script.js" defer></script>
-  </head>
-  <body>
-    <div class="container">
-      <header class="header-row"> 
-        <div class="box"><h1>Srinaya</h1></div>
-        <nav class="box">
-          <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </nav>
-      </header>
-
-      <section id="home" class="row">
-        <div class="content-wrapper">
-          <div class="text-box">
-            <h1>Full Stack Developer</h1>
-            <p>Building modern web and mobile applications with latest technologies.</p>
-            <button>View My Work</button>
-            <button>Contact Me</button>
-          </div>
-          <div class="image-box">
-            <img src="https://picsum.photos/id/10/400/400" alt="Profile" />
-          </div>
-        </div>
-      </section>
-
-      <section id="projects" class="row section-bg">
-        <h1>Projects</h1>
-        <div class="projects-wrapper">
-          <div class="box"><h3><a href="https://srinaya29.github.io/mystore/index.html">Project 1</a></h3><p>AI-powered chatbot with React.js & Node.js.</p></div>
-          <div class="box"><h3><a href="https://srinaya29.github.io/forms/forms.html">Project 2</a></h3><p>Data visualization dashboard using Python.</p></div>
-          <div class="box"><h3><a href="#">Project 3</a></h3><p>Task management app built with Flutter.</p></div>
-          <div class="box"><h3><a href="#">Project 4</a></h3><p>Upcoming innovative project.</p></div>
-        </div>
-      </section>
-      
-      <section id="services" class="row">
-        <h1>Services</h1>
-        <div class="services-wrapper">
-          <div class="box"><h3>Web Development</h3><p>Responsive and scalable web apps.</p></div>
-          <div class="box"><h3>Mobile Development</h3><p>Cross-platform mobile applications.</p></div>
-          <div class="box"><h3>Backend Development</h3><p>APIs & Database Management.</p></div>
-        </div>
-      </section>
-
-      <section id="about" class="row">
-        <h1>About Me</h1>
-        <p>Experienced Full Stack Developer specializing in MERN & Python stacks.</p>
-        <h2>Skills</h2>
-        <p>JavaScript, React.js, Node.js, Python, MongoDB, SQL</p>
-      </section>
-
-      <section id="contact" class="row section-bg">
-        <h1>Contact</h1>
-        <div class="contact-wrapper">
-          <div class="box">
-            <h3>Get in Touch</h3>
-            <input type="text" placeholder="Your Name">
-            <input type="email" placeholder="Your Email">
-            <textarea rows="5" placeholder="Your Message"></textarea>
-            <button>Send Message</button>
-          </div>
-          <div class="box">
-            <h3>Contact Details</h3>
-            <p><b>Email:</b> johndoe@email.com</p>
-            <p><b>Phone:</b> +91 987 654 3210</p>
-            <p><b>Location:</b> New York, USA</p>
-            <div class="social-links">
-              <a href="#"><i class="fab fa-linkedin"></i></a>
-              <a href="#"><i class="fab fa-github"></i></a>
-              <a href="#"><i class="fab fa-twitter"></i></a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <footer class="footer">&copy; 2024 Srinaya. All rights reserved.</footer>
-    </div>
-  </body>
-</html>
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  /* Header */
+  .header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    background-color: #333;
+    color: #fff;
+  }
+  
+  .header-row h1 {
+    margin: 0;
+    font-size: 24px;
+  }
+  
+  .header-row nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  .header-row nav ul li {
+    margin-left: 20px;
+  }
+  
+  .header-row nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  .header-row nav ul li a:hover {
+    color: #ff6347;
+  }
+  
+  /* Home Section */
+  #home {
+    display: flex;
+    align-items: center;
+    padding: 100px 0;
+    background-color: #fff;
+  }
+  
+  #home .content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  
+  #home .text-box {
+    max-width: 50%;
+  }
+  
+  #home h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+  }
+  
+  #home p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #666;
+  }
+  
+  .button-group {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .btn-primary,
+  .btn-secondary {
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-primary {
+    background-color: #333;
+    color: #fff;
+  }
+  
+  .btn-primary:hover {
+    background-color: #ff6347;
+  }
+  
+  .btn-secondary {
+    background-color: #ff6347;
+    color: #fff;
+  }
+  
+  .btn-secondary:hover {
+    background-color: #333;
+  }
+  
+  #home .image-box img {
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Projects Section */
+  #projects {
+    padding: 100px 0;
+    background-color: #f4f4f9;
+  }
+  
+  #projects h1 {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 36px;
+  }
+  
+  .projects-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+  
+  .projects-wrapper .box {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .projects-wrapper .box:hover {
+    transform: translateY(-10px);
+  }
+  
+  .projects-wrapper .box h3 {
+    margin-bottom: 10px;
+    font-size: 24px;
+  }
+  
+  .projects-wrapper .box p {
+    font-size: 16px;
+    color: #666;
+  }
+  
+  .projects-wrapper .box a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s ease;
+  }
+  
+  .projects-wrapper .box a:hover {
+    color: #ff6347;
+  }
+  
+  /* Services Section */
+  #services {
+    padding: 100px 0;
+    background-color: #fff;
+  }
+  
+  #services h1 {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 36px;
+  }
+  
+  .services-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+  
+  .services-wrapper .box {
+    background-color: #f4f4f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .services-wrapper .box:hover {
+    transform: translateY(-10px);
+  }
+  
+  .services-wrapper .box h3 {
+    margin-bottom: 10px;
+    font-size: 24px;
+  }
+  
+  .services-wrapper .box p {
+    font-size: 16px;
+    color: #666;
+  }
+  
+  /* About Section */
+  #about {
+    padding: 100px 0;
+    background-color: #f4f4f9;
+    text-align: center;
+  }
+  
+  #about h1 {
+    margin-bottom: 50px;
+    font-size: 36px;
+  }
+  
+  #about p {
+    font-size: 18px;
+    color: #666;
+  }
+  
+  #about h2 {
+    margin-top: 30px;
+    font-size: 28px;
+  }
+  
+  /* Contact Section */
+  #contact {
+    padding: 100px 0;
+    background-color: #fff;
+  }
+  
+  #contact h1 {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 36px;
+  }
+  
+  .contact-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+  
+  .contact-wrapper .box {
+    background-color: #f4f4f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .contact-wrapper .box h3 {
+    margin-bottom: 20px;
+    font-size: 24px;
+  }
+  
+  .contact-wrapper .box input,
+  .contact-wrapper .box textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .contact-wrapper .box button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .contact-wrapper .box button:hover {
+    background-color: #ff6347;
+  }
+  
+  .contact-wrapper .box p {
+    font-size: 16px;
+    color: #666;
+  }
+  
+  .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  .social-links a {
+    color: #333;
+    font-size: 24px;
+    transition: color 0.3s ease;
+  }
+  
+  .social-links a:hover {
+    color: #ff6347;
+  }
+  
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #333;
+    color: #fff;
+    margin-top: 50px;
+  }
+  
+  footer p {
+    margin: 0;
+    font-size: 14px;
+  }

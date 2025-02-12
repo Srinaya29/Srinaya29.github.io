@@ -5,13 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Full Stack Developer | Portfolio</title>
     <link rel="stylesheet" href="assets/css/styles.css" />
+    <!-- Font Awesome for icons -->
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <!-- Custom JavaScript -->
     <script src="assets/js/script.js" defer></script>
   </head>
   <body>
     <div class="container">
-      <header class="header-row"> 
-        <div class="box"><h1>Srinaya</h1></div>
+      <!-- Header Section -->
+      <header class="header-row">
+        <div class="box">
+          <h1>Srinaya</h1>
+        </div>
         <nav class="box">
           <ul>
             <li><a href="#home">Home</a></li>
@@ -23,39 +28,66 @@
         </nav>
       </header>
 
+      <!-- Home Section -->
       <section id="home" class="row">
         <div class="content-wrapper">
           <div class="text-box">
             <h1>Full Stack Developer</h1>
-            <p>Building modern web and mobile applications with latest technologies.</p>
-            <button>View My Work</button>
-            <button>Contact Me</button>
+            <p>Building modern web and mobile applications with the latest technologies.</p>
+            <div class="button-group">
+              <button class="btn-primary">View My Work</button>
+              <button class="btn-secondary">Contact Me</button>
+            </div>
           </div>
           <div class="image-box">
-            <img src="https://picsum.photos/id/10/400/400" alt="Profile" />
+            <img src="https://picsum.photos/id/10/400/400" alt="Profile Image" />
           </div>
         </div>
       </section>
 
+      <!-- Projects Section -->
       <section id="projects" class="row section-bg">
         <h1>Projects</h1>
         <div class="projects-wrapper">
-          <div class="box"><h3><a href="https://srinaya29.github.io/mystore/index.html">Project 1</a></h3><p>AI-powered chatbot with React.js & Node.js.</p></div>
-          <div class="box"><h3><a href="https://srinaya29.github.io/forms/forms.html">Project 2</a></h3><p>Data visualization dashboard using Python.</p></div>
-          <div class="box"><h3><a href="#">Project 3</a></h3><p>Task management app built with Flutter.</p></div>
-          <div class="box"><h3><a href="#">Project 4</a></h3><p>Upcoming innovative project.</p></div>
-        </div>
-      </section>
-      
-      <section id="services" class="row">
-        <h1>Services</h1>
-        <div class="services-wrapper">
-          <div class="box"><h3>Web Development</h3><p>Responsive and scalable web apps.</p></div>
-          <div class="box"><h3>Mobile Development</h3><p>Cross-platform mobile applications.</p></div>
-          <div class="box"><h3>Backend Development</h3><p>APIs & Database Management.</p></div>
+          <div class="box">
+            <h3><a href="https://srinaya29.github.io/mystore/index.html">Project 1</a></h3>
+            <p>AI-powered chatbot with React.js & Node.js.</p>
+          </div>
+          <div class="box">
+            <h3><a href="https://srinaya29.github.io/forms/forms.html">Project 2</a></h3>
+            <p>Data visualization dashboard using Python.</p>
+          </div>
+          <div class="box">
+            <h3><a href="#">Project 3</a></h3>
+            <p>Task management app built with Flutter.</p>
+          </div>
+          <div class="box">
+            <h3><a href="#">Project 4</a></h3>
+            <p>Upcoming innovative project.</p>
+          </div>
         </div>
       </section>
 
+      <!-- Services Section -->
+      <section id="services" class="row">
+        <h1>Services</h1>
+        <div class="services-wrapper">
+          <div class="box">
+            <h3>Web Development</h3>
+            <p>Responsive and scalable web apps.</p>
+          </div>
+          <div class="box">
+            <h3>Mobile Development</h3>
+            <p>Cross-platform mobile applications.</p>
+          </div>
+          <div class="box">
+            <h3>Backend Development</h3>
+            <p>APIs & Database Management.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- About Section -->
       <section id="about" class="row">
         <h1>About Me</h1>
         <p>Experienced Full Stack Developer specializing in MERN & Python stacks.</p>
@@ -63,15 +95,18 @@
         <p>JavaScript, React.js, Node.js, Python, MongoDB, SQL</p>
       </section>
 
+      <!-- Contact Section -->
       <section id="contact" class="row section-bg">
         <h1>Contact</h1>
         <div class="contact-wrapper">
           <div class="box">
             <h3>Get in Touch</h3>
-            <input type="text" placeholder="Your Name">
-            <input type="email" placeholder="Your Email">
-            <textarea rows="5" placeholder="Your Message"></textarea>
-            <button>Send Message</button>
+            <form id="contact-form">
+              <input type="text" placeholder="Your Name" required />
+              <input type="email" placeholder="Your Email" required />
+              <textarea rows="5" placeholder="Your Message" required></textarea>
+              <button type="submit" class="btn-primary">Send Message</button>
+            </form>
           </div>
           <div class="box">
             <h3>Contact Details</h3>
@@ -87,8 +122,10 @@
         </div>
       </section>
 
-      <footer class="footer">&copy; 2024 Srinaya. All rights reserved.</footer>
+      <!-- Footer Section -->
+      <footer class="footer">
+        <p>&copy; <span id="current-year"></span> Srinaya. All rights reserved.</p>
+      </footer>
     </div>
   </body>
 </html>
-
