@@ -1,15 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Srinaya</h1>
-    <a href="https://srinaya29.github.io/mystore/index.html">Project1</a><br>
-    <a href="https://srinaya29.github.io/forms/forms.html">Project2</a><br>
-    <a href="#">Project3</a><br>
-    <a href="#">Project4</a>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Full Stack Developer | Portfolio</title>
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="assets/js/script.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header-row"> 
+        <div class="box"><h1>Srinaya</h1></div>
+        <nav class="box">
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <section id="home" class="row">
+        <div class="content-wrapper">
+          <div class="text-box">
+            <h1>Full Stack Developer</h1>
+            <p>Building modern web and mobile applications with latest technologies.</p>
+            <button>View My Work</button>
+            <button>Contact Me</button>
+          </div>
+          <div class="image-box">
+            <img src="https://picsum.photos/id/10/400/400" alt="Profile" />
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="row section-bg">
+        <h1>Projects</h1>
+        <div class="projects-wrapper">
+          <div class="box"><h3><a href="https://srinaya29.github.io/mystore/index.html">Project 1</a></h3><p>AI-powered chatbot with React.js & Node.js.</p></div>
+          <div class="box"><h3><a href="https://srinaya29.github.io/forms/forms.html">Project 2</a></h3><p>Data visualization dashboard using Python.</p></div>
+          <div class="box"><h3><a href="#">Project 3</a></h3><p>Task management app built with Flutter.</p></div>
+          <div class="box"><h3><a href="#">Project 4</a></h3><p>Upcoming innovative project.</p></div>
+        </div>
+      </section>
+      
+      <section id="services" class="row">
+        <h1>Services</h1>
+        <div class="services-wrapper">
+          <div class="box"><h3>Web Development</h3><p>Responsive and scalable web apps.</p></div>
+          <div class="box"><h3>Mobile Development</h3><p>Cross-platform mobile applications.</p></div>
+          <div class="box"><h3>Backend Development</h3><p>APIs & Database Management.</p></div>
+        </div>
+      </section>
+
+      <section id="about" class="row">
+        <h1>About Me</h1>
+        <p>Experienced Full Stack Developer specializing in MERN & Python stacks.</p>
+        <h2>Skills</h2>
+        <p>JavaScript, React.js, Node.js, Python, MongoDB, SQL</p>
+      </section>
+
+      <section id="contact" class="row section-bg">
+        <h1>Contact</h1>
+        <div class="contact-wrapper">
+          <div class="box">
+            <h3>Get in Touch</h3>
+            <input type="text" placeholder="Your Name">
+            <input type="email" placeholder="Your Email">
+            <textarea rows="5" placeholder="Your Message"></textarea>
+            <button>Send Message</button>
+          </div>
+          <div class="box">
+            <h3>Contact Details</h3>
+            <p><b>Email:</b> johndoe@email.com</p>
+            <p><b>Phone:</b> +91 987 654 3210</p>
+            <p><b>Location:</b> New York, USA</p>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-linkedin"></i></a>
+              <a href="#"><i class="fab fa-github"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer">&copy; 2024 Srinaya. All rights reserved.</footer>
+    </div>
+  </body>
 </html>
+
