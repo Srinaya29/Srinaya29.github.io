@@ -115,10 +115,7 @@ body {
     background-color: #333;
   }
   
-  #home .image-box img {
-    border-radius: 50%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  }
+
   
   /* Projects Section */
   #projects {
@@ -322,3 +319,75 @@ body {
     margin: 0;
     font-size: 14px;
   }
+  /* Home Section */
+#home {
+  display: flex;
+  align-items: center;
+  padding: 100px 0;
+  background-image: url('assets/images/portfolio.jpeg'); /* Path to your image */
+  background-size: cover; /* Ensures the image covers the entire section */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  height: 100vh; /* Full viewport height */
+  color: white; /* Adjust text color for better visibility */
+}
+
+#home .content-wrapper {
+  display: flex;
+  justify-content: center; /* Center the content */
+  align-items: center;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Adds a semi-transparent overlay for better text readability */
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+#home .text-box {
+  max-width: 600px; /* Limits the width of the text box */
+}
+
+#home h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+#home p {
+  font-size: 18px;
+  margin-bottom: 30px;
+  color: #fff; /* Ensure text is visible on the background */
+}
+
+.button-group {
+  display: flex;
+  gap: 10px;
+  justify-content: center; /* Center the buttons */
+}
+
+.btn-primary,
+.btn-secondary {
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary {
+  background-color: #333;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background-color: #ff6347;
+}
+
+.btn-secondary {
+  background-color: #ff6347;
+  color: #fff;
+}
+
+.btn-secondary:hover {
+  background-color: #333;
+}
