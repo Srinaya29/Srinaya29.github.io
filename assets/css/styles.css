@@ -1,112 +1,93 @@
-/* Global Styles */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
-  }
-  
-  .container {
-    width: 100%;
-    overflow: auto;
-    scroll-behavior: smooth;
-  }
-  
-  /* Header */
-  .header-row {
-    background-color: #ff8c00;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 50px;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-  }
-  
-  .header-row h1 {
-    color: white;
-    margin: 0;
-  }
-  
-  .header-row ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .header-row li {
-    display: inline;
-    margin: 0 15px;
-  }
-  
-  .header-row a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-    font-weight: bold;
-  }
-  
-  .header-row a:hover {
-    text-decoration: underline;
-  }
-  
-  /* Sections */
-  .row {
-    padding: 80px 50px;
-    text-align: center;
-  }
-  
-  .section-bg {
-    background-color: #fff3e0;
-  }
-  
-  .projects-wrapper, .services-wrapper, .contact-wrapper {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-  }
-  
-  .box {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 300px;
-    text-align: center;
-  }
-  
-  /* Buttons */
-  button {
-    background-color: teal;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin: 10px 5px;
-  }
-  
-  button:hover {
-    background-color: #005f5f;
-  }
-  
-  /* Contact */
-  .contact-wrapper input, .contact-wrapper textarea {
-    width: 100%;
-    padding: 10px;
-    margin: 5px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  
-  /* Footer */
-  .footer {
-    background-color: black;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    margin-top: 20px;
-  }
-  
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Full Stack Developer | Portfolio</title>
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="assets/js/script.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header-row"> 
+        <div class="box"><h1>Srinaya</h1></div>
+        <nav class="box">
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <section id="home" class="row">
+        <div class="content-wrapper">
+          <div class="text-box">
+            <h1>Full Stack Developer</h1>
+            <p>Building modern web and mobile applications with latest technologies.</p>
+            <button>View My Work</button>
+            <button>Contact Me</button>
+          </div>
+          <div class="image-box">
+            <img src="https://picsum.photos/id/10/400/400" alt="Profile" />
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="row section-bg">
+        <h1>Projects</h1>
+        <div class="projects-wrapper">
+          <div class="box"><h3><a href="https://srinaya29.github.io/mystore/index.html">Project 1</a></h3><p>AI-powered chatbot with React.js & Node.js.</p></div>
+          <div class="box"><h3><a href="https://srinaya29.github.io/forms/forms.html">Project 2</a></h3><p>Data visualization dashboard using Python.</p></div>
+          <div class="box"><h3><a href="#">Project 3</a></h3><p>Task management app built with Flutter.</p></div>
+          <div class="box"><h3><a href="#">Project 4</a></h3><p>Upcoming innovative project.</p></div>
+        </div>
+      </section>
+      
+      <section id="services" class="row">
+        <h1>Services</h1>
+        <div class="services-wrapper">
+          <div class="box"><h3>Web Development</h3><p>Responsive and scalable web apps.</p></div>
+          <div class="box"><h3>Mobile Development</h3><p>Cross-platform mobile applications.</p></div>
+          <div class="box"><h3>Backend Development</h3><p>APIs & Database Management.</p></div>
+        </div>
+      </section>
+
+      <section id="about" class="row">
+        <h1>About Me</h1>
+        <p>Experienced Full Stack Developer specializing in MERN & Python stacks.</p>
+        <h2>Skills</h2>
+        <p>JavaScript, React.js, Node.js, Python, MongoDB, SQL</p>
+      </section>
+
+      <section id="contact" class="row section-bg">
+        <h1>Contact</h1>
+        <div class="contact-wrapper">
+          <div class="box">
+            <h3>Get in Touch</h3>
+            <input type="text" placeholder="Your Name">
+            <input type="email" placeholder="Your Email">
+            <textarea rows="5" placeholder="Your Message"></textarea>
+            <button>Send Message</button>
+          </div>
+          <div class="box">
+            <h3>Contact Details</h3>
+            <p><b>Email:</b> johndoe@email.com</p>
+            <p><b>Phone:</b> +91 987 654 3210</p>
+            <p><b>Location:</b> New York, USA</p>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-linkedin"></i></a>
+              <a href="#"><i class="fab fa-github"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer">&copy; 2024 Srinaya. All rights reserved.</footer>
+    </div>
+  </body>
+</html>

@@ -1,35 +1,33 @@
-document.addEventListener("DOMContentLoaded", function () {
-    // Smooth scrolling for navigation links
-    document.querySelectorAll("nav a").forEach(anchor => {
-        anchor.addEventListener("click", function (e) {
-            e.preventDefault();
-            const targetId = this.getAttribute("href").substring(1);
-            document.getElementById(targetId).scrollIntoView({ behavior: "smooth" });
-        });
+// Smooth scrolling for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      document.querySelector(this.getAttribute('href')).scrollIntoView({
+        behavior: 'smooth'
+      });
     });
-
-    // Dynamic text effect
-    const titles = ["Full Stack Developer", "Web & Mobile App Enthusiast", "Tech Innovator"];
-    let count = 0;
-    const titleElement = document.querySelector("#home h1");
-
-    function changeTitle() {
-        titleElement.textContent = titles[count];
-        count = (count + 1) % titles.length;
-        setTimeout(changeTitle, 3000);
-    }
-    changeTitle();
-
-    // Contact form validation
-    document.querySelector("#contact button").addEventListener("click", function () {
-        const name = document.querySelector("#contact input[type='text']").value;
-        const email = document.querySelector("#contact input[type='email']").value;
-        const message = document.querySelector("#contact textarea").value;
-
-        if (!name || !email || !message) {
-            alert("Please fill out all fields before sending.");
-            return;
-        }
-        alert("Message sent successfully!");
+  });
+  
+  // Form submission handling
+  const contactForm = document.querySelector('#contact form');
+  if (contactForm) {
+    contactForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      const formData = new FormData(this);
+      const name = formData.get('name');
+      const email = formData.get('email');
+      const message = formData.get('message');
+  
+      // Simulate form submission
+      console.log('Name:', name);
+      console.log('Email:', email);
+      console.log('Message:', message);
+  
+      alert('Thank you for your message! I will get back to you soon.');
+      this.reset();
     });
-});
+  }
+  
+  // Dynamic year in footer
+  const year = new Date().getFullYear();
+  document.querySelector('footer p').textContent = `© ${year} Srinaya. All rights reserved.`;
