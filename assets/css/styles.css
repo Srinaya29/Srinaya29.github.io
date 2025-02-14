@@ -1,42 +1,18 @@
-/* General Styles */
-body {
-  font-family: 'Arial', sans-serif;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  background-color: #f4f4f9;
-  color: #333;
-  line-height: 1.6;
-}
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-/* Home Section */
 #home {
   display: flex;
   align-items: center;
   padding: 100px 0;
-  background-image: url('assets/images/portfolio.jpeg'); /* Path to your image */
-  background-size: cover; /* Ensures the image covers the entire section */
-  background-position: center; /* Centers the image */
-  background-repeat: no-repeat; /* Prevents the image from repeating */
   height: 100vh; /* Full viewport height */
   color: white; /* Adjust text color for better visibility */
 }
 
 #home .content-wrapper {
   display: flex;
-  justify-content: center; /* Center the content */
+  justify-content: flex-start; /* Align content to the left */
   align-items: center;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Adds a semi-transparent overlay for better text readability */
   padding: 20px;
-  border-radius: 10px;
-  text-align: center;
+  text-align: left;
 }
 
 #home .text-box {
@@ -51,13 +27,12 @@ body {
 #home p {
   font-size: 18px;
   margin-bottom: 30px;
-  color: #fff; /* Ensure text is visible on the background */
+  color: #333; /* Adjust text color */
 }
 
 .button-group {
   display: flex;
   gap: 10px;
-  justify-content: center; /* Center the buttons */
 }
 
 .btn-primary,
