@@ -14,10 +14,47 @@ body {
   margin: 0 auto;
   padding: 0 20px;
 }
-/*Home section*/
+
+/* Navbar */
+.navbar {
+  background-color: #333;
+  padding: 10px 0;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.navbar-brand:hover,
+.navbar-nav .nav-link:hover {
+  color: #f39c12;
+}
+
+.navbar-nav .nav-link {
+  color: #fff;
+  font-size: 1rem;
+  padding: 10px 15px;
+  transition: color 0.3s ease-in-out;
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #fff;
+}
+
+.theme-toggle:hover {
+  color: #f39c12;
+}
+
+/* Sections */
 .row {
   padding: 100px;
-  height: 75%;
 }
 
 .row .box {
@@ -25,58 +62,24 @@ body {
   margin: 10px;
 }
 
+/* Buttons */
 button {
   background-color: teal;
   padding: 10px;
   color: white;
   border: none;
-  border-radius: 10%;
-}
-/* Header */
-.header-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 0;
-  background-color: #333;
-  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-.header-row h1 {
-  margin: 0;
-  font-size: 24px;
-}
-
-.header-row nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-}
-
-.header-row nav ul li {
-  margin-left: 20px;
-}
-
-.header-row nav ul li a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s ease;
-}
-
-.header-row nav ul li a:hover {
-  color: #ff6347;
+button:hover {
+  background-color: #00796b;
 }
 
 /* Projects Section */
-/* Custom CSS for transitions and hover effects */
-.transition-all {
-  transition: all 0.3s ease;
-}
-
-.transition-scale {
-  transition: transform 0.3s ease;
+.card {
+  border: 2px solid #000 !important;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .card:hover {
@@ -84,59 +87,8 @@ button {
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
 }
 
-.card:hover .transition-scale {
-  transform: scale(1.05);
-}
-
-.hover-orange {
-  position: relative;
-}
-
-.hover-orange::after {
-  content: '';
-  display: block;
-  width: 0;
-  height: 2px;
-  background: #ff6347;
-  transition: width 0.3s ease;
-  position: absolute;
-  bottom: -5px;
-  left: 0;
-}
-
-.hover-orange:hover {
-  color: #ff6347 !important;
-}
-
-.hover-orange:hover::after {
-  width: 100%;
-}
-
-.letter-spacing-2 {
-  letter-spacing: 2px;
-}
-/* Custom CSS for black outline */
-.card {
-  border: 2px solid #000 !important; /* Black outline */
-}
-
-.card:hover {
-  border-color: #333; /* Darker border on hover (optional) */
-}
-/* Services Section 
-.service-card {
-  transition: transform 0.3s ease-in-out;
-}
-
-.service-card:hover {
-  transform: translateY(-10px);
-}*/
-.card{
-  transition: transform 0.3s;
-}
-.card:hover{
-  /*transform: scale(1.2);*/
-  transform:translateY(-10px);
+.card-text {
+  color: #666;
 }
 
 /* About Section */
@@ -156,21 +108,11 @@ button {
   color: #666;
 }
 
-#about h2 {
-  margin-top: 30px;
-  font-size: 28px;
-}
-
 /* Contact Section */
 #contact {
   padding: 100px 0;
   background-color: #fff;
-}
-
-#contact h1 {
   text-align: center;
-  margin-bottom: 50px;
-  font-size: 36px;
 }
 
 .contact-wrapper {
@@ -186,11 +128,6 @@ button {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.contact-wrapper .box h3 {
-  margin-bottom: 20px;
-  font-size: 24px;
-}
-
 .contact-wrapper .box input,
 .contact-wrapper .box textarea {
   width: 100%;
@@ -202,10 +139,8 @@ button {
 
 .contact-wrapper .box button {
   padding: 10px 20px;
-  border: none;
   background-color: #333;
   color: #fff;
-  cursor: pointer;
   font-size: 16px;
   border-radius: 5px;
   transition: background-color 0.3s ease;
@@ -215,37 +150,107 @@ button {
   background-color: #ff6347;
 }
 
-.contact-wrapper .box p {
-  font-size: 16px;
-  color: #666;
-}
-
-.social-links {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-}
-
-.social-links a {
-  color: #333;
-  font-size: 24px;
-  transition: color 0.3s ease;
-}
-
-.social-links a:hover {
-  color: #ff6347;
-}
-
 /* Footer */
 footer {
+  width: 100%;
+  position: relative;
+  bottom: 0;
+  left: 0;
+  background-color: #333; /* Dark background */
+  color: white;
   text-align: center;
   padding: 20px 0;
-  background-color: #333;
-  color: #fff;
-  margin-top: 50px;
 }
 
 footer p {
   margin: 0;
   font-size: 14px;
 }
+
+/* Dark Mode Styles */
+
+.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+.dark-mode .navbar {
+  background-color: #222 !important;
+}
+
+.dark-mode footer {
+  background-color: #000 !important; /* Black background in dark mode */
+  color: #ffffff !important; /* White text */
+}
+
+.dark-mode .card,
+.dark-mode .contact-wrapper .box {
+  background-color: #1e1e1e;
+  color: #ffffff;
+  border-color: #ffffff !important;
+}
+
+.dark-mode a {
+  color: #ff6347;
+}
+
+.dark-mode .theme-toggle {
+  background-color: #fff;
+  color: #222;
+  border-radius: 5px;
+}
+
+.dark-mode .card-text {
+  color: #ffffff !important;
+}
+
+.dark-mode .card-title a {
+  color: #ffffff !important;
+}
+.dark-mode h1 {
+  color: #ffffff;
+}
+.dark-mode #projects {
+  background-color: #121212 !important;
+}
+.dark-mode #about {
+  background-color: #000 !important; /* Black background */
+}
+
+.dark-mode #about h1,
+.dark-mode #about p {
+  color: #ffffff !important; /* White text */
+}
+.dark-mode #contact {
+  background-color: #000 !important; /* Black background */
+}
+
+.dark-mode #contact h1,
+.dark-mode #contact h3,
+.dark-mode #contact p,
+.dark-mode #contact a {
+  color: #ffffff !important; /* White text */
+}
+
+.dark-mode #contact input,
+.dark-mode #contact textarea {
+  background-color: #1e1e1e !important; /* Dark input fields */
+  color: #ffffff !important; /* White text inside inputs */
+  border: 1px solid #ffffff !important; /* White border */
+}
+
+.dark-mode #contact .btn-primary {
+  background-color: #f39c12 !important; /* Orange button */
+  color: #000 !important; /* Black text */
+}
+
+.dark-mode #contact .btn-primary:hover {
+  background-color: #ff6347 !important; /* Red-orange on hover */
+}
+
+.dark-mode #contact .social-links a {
+  color: #f39c12 !important; /* Orange icons */
+}
+
+
+
