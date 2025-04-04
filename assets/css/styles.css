@@ -4,8 +4,8 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: #f4f4f9;
-  color: #333;
+  background-color: #121212; /* Dark mode background by default */
+  color: #ffffff; /* Dark mode text color */
   line-height: 1.6;
 }
 
@@ -17,7 +17,7 @@ body {
 
 /* Navbar */
 .navbar {
-  background-color: #333;
+  background-color: #222; /* Dark navbar */
   padding: 10px 0;
 }
 
@@ -78,40 +78,43 @@ button:hover {
 
 /* Projects Section */
 .card {
-  border: 2px solid #000 !important;
+  background-color: #1e1e1e;
+  border: 2px solid #ffffff !important;
+  color: #ffffff;
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 12px 24px rgba(255, 255, 255, 0.1);
 }
 
 .card-text {
-  color: #666;
+  color: #ffffff;
 }
 
 /* About Section */
 #about {
   padding: 100px 0;
-  background-color: #f4f4f9;
+  background-color: #000;
   text-align: center;
 }
 
 #about h1 {
   margin-bottom: 50px;
   font-size: 36px;
+  color: #ffffff;
 }
 
 #about p {
   font-size: 18px;
-  color: #666;
+  color: #ffffff;
 }
 
 /* Contact Section */
 #contact {
   padding: 100px 0;
-  background-color: #fff;
+  background-color: #000;
   text-align: center;
 }
 
@@ -122,10 +125,11 @@ button:hover {
 }
 
 .contact-wrapper .box {
-  background-color: #f4f4f9;
+  background-color: #1e1e1e;
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.05);
+  color: #ffffff;
 }
 
 .contact-wrapper .box input,
@@ -133,14 +137,16 @@ button:hover {
   width: 100%;
   padding: 10px;
   margin-bottom: 15px;
-  border: 1px solid #ccc;
+  background-color: #1e1e1e;
+  border: 1px solid #ffffff;
   border-radius: 5px;
+  color: #ffffff;
 }
 
 .contact-wrapper .box button {
   padding: 10px 20px;
-  background-color: #333;
-  color: #fff;
+  background-color: #f39c12;
+  color: #000;
   font-size: 16px;
   border-radius: 5px;
   transition: background-color 0.3s ease;
@@ -156,7 +162,7 @@ footer {
   position: relative;
   bottom: 0;
   left: 0;
-  background-color: #333; /* Dark background */
+  background-color: #000;
   color: white;
   text-align: center;
   padding: 20px 0;
@@ -167,9 +173,8 @@ footer p {
   font-size: 14px;
 }
 
-/* Dark Mode Styles */
-
-.dark-mode {
+/* Optional Dark Mode Toggle (if needed later) */
+body.dark-mode {
   background-color: #121212;
   color: #ffffff;
 }
@@ -179,8 +184,8 @@ footer p {
 }
 
 .dark-mode footer {
-  background-color: #000 !important; /* Black background in dark mode */
-  color: #ffffff !important; /* White text */
+  background-color: #000 !important;
+  color: #ffffff !important;
 }
 
 .dark-mode .card,
@@ -191,7 +196,7 @@ footer p {
 }
 
 .dark-mode a {
-  color: #ff6347;
+  color: #f39c12;
 }
 
 .dark-mode .theme-toggle {
@@ -207,50 +212,51 @@ footer p {
 .dark-mode .card-title a {
   color: #ffffff !important;
 }
+
 .dark-mode h1 {
   color: #ffffff;
 }
+
 .dark-mode #projects {
   background-color: #121212 !important;
 }
+
 .dark-mode #about {
-  background-color: #000 !important; /* Black background */
+  background-color: #000 !important;
 }
 
 .dark-mode #about h1,
 .dark-mode #about p {
-  color: #ffffff !important; /* White text */
+  color: #ffffff !important;
 }
+
 .dark-mode #contact {
-  background-color: #000 !important; /* Black background */
+  background-color: #000 !important;
 }
 
 .dark-mode #contact h1,
 .dark-mode #contact h3,
 .dark-mode #contact p,
 .dark-mode #contact a {
-  color: #ffffff !important; /* White text */
+  color: #ffffff !important;
 }
 
 .dark-mode #contact input,
 .dark-mode #contact textarea {
-  background-color: #1e1e1e !important; /* Dark input fields */
-  color: #ffffff !important; /* White text inside inputs */
-  border: 1px solid #ffffff !important; /* White border */
+  background-color: #1e1e1e !important;
+  color: #ffffff !important;
+  border: 1px solid #ffffff !important;
 }
 
 .dark-mode #contact .btn-primary {
-  background-color: #f39c12 !important; /* Orange button */
-  color: #000 !important; /* Black text */
+  background-color: #f39c12 !important;
+  color: #000 !important;
 }
 
 .dark-mode #contact .btn-primary:hover {
-  background-color: #ff6347 !important; /* Red-orange on hover */
+  background-color: #ff6347 !important;
 }
 
 .dark-mode #contact .social-links a {
-  color: #f39c12 !important; /* Orange icons */
+  color: #f39c12 !important;
 }
-
-
-

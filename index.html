@@ -4,220 +4,217 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Full Stack Developer | Portfolio</title>
+
+    <!-- CSS -->
     <link rel="stylesheet" href="assets/css/styles.css" />
-    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-    <!-- Font Awesome for icons -->
+    <!-- Scripts -->
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-    <!-- Bootstrap JS (For Tabs to Work) -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
-    <!-- Custom JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
     <script src="assets/js/script.js" defer></script>
   </head>
+
   <body>
     <div class="container">
       <!-- Navbar -->
-        <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-          <div class="container">
-              <a class="navbar-brand" href="#">Srinaya</a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                  <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarNav">
-                  <ul class="navbar-nav ms-auto">
-                      <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-                      <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-                      <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-                      <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                      <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-                  </ul>
-                  <button class="theme-toggle ms-3" onclick="toggleTheme()">🌓</button>
-              </div>
+      <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="#">Srinaya</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+              <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+              <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+              <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+            </ul>
+            <button class="theme-toggle ms-3" onclick="toggleTheme()">🌓</button>
           </div>
+        </div>
       </nav>
 
       <!-- Home Section -->
-      <div class="row" id="home">
-        <div style="display: flex;padding-top: 50px;">
-          <div class="box">
+      <section id="home" class="mt-5 pt-5">
+        <div class="row align-items-center py-5">
+          <div class="col-md-6">
             <h1>Full Stack Developer</h1>
             <p>
               I'm a passionate full-stack developer who loves building web applications.
               I work on both frontend and backend to create smooth and user-friendly experiences.
-               I enjoy writing clean code and using modern technologies. Problem-solving and learning 
-               new things keep me excited. My goal is to build efficient and creative digital solutions.
+              I enjoy writing clean code and using modern technologies. Problem-solving and learning 
+              new things keep me excited. My goal is to build efficient and creative digital solutions.
             </p>
           </div>
-          <div class="box">
-            <img src="assets/images/fullstack.jpg" />
+          <div class="col-md-6">
+            <img src="assets/images/fullstack.jpg" class="img-fluid rounded" alt="Full Stack Developer" />
           </div>
         </div>
-      </div>
-
+      </section>
 
       <!-- Projects Section -->
-      <!-- Projects Section -->
-<section id="projects" class="py-5 bg-light">
-  <div class="container">
-    <h1 class="text-center mb-4">Projects</h1>
-    <div class="row g-4">
-      <!-- Project 1 -->
-      <div class="col-md-6 col-lg-4">
-        <div class="card h-100 shadow-sm border border-2 border-dark rounded-3 overflow-hidden transition-all">
-          <div class="overflow-hidden">
-            <img src="assets/images/images.jpeg" alt="MyStore Image" class="card-img-top rounded-3 transition-scale">
-          </div>
-          <div class="card-body text-center">
-            <h3 class="card-title fw-bold mb-3"><a href="https://srinaya29.github.io/mystore/index.html" class="text-decoration-none text-dark hover-orange">MyStore</a></h3>
-            <p class="card-text text-muted">This is an online store showcasing a variety of food items with detailed descriptions. It provides a clean and user-friendly browsing experience, allowing customers to explore different products effortlessly. The focus is on creating an engaging and visually appealing platform for food lovers.</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Project 2 -->
-        <div class="col-md-6 col-lg-4">
-          <div class="card h-100 shadow-sm border border-2 border-dark rounded-3 overflow-hidden transition-all">
-            <div class="overflow-hidden">
-              <img src="assets/images/mybank.jpg" alt="MyBank Image" class="card-img-top rounded-3 transition-scale">
-            </div>
-            <div class="card-body text-center">
-              <h3 class="card-title fw-bold mb-3"><a href="https://srinaya29.github.io/bank/index.html" class="text-decoration-none text-dark hover-orange">MyBank</a></h3>
-              <p class="card-text text-muted">This is a simple banking page that allows users to understand the login credentials and explore basic banking features. It provides a clean and easy-to-navigate interface, making it convenient for users to interact with the system.</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Project 3 -->
-        <div class="col-md-6 col-lg-4">
-          <div class="card h-100 shadow-sm border border-2 border-dark rounded-3 overflow-hidden transition-all">
-            <div class="overflow-hidden">
-              <img src="assets/images/online-store.jpg" alt="js Image" class="card-img-top rounded-3 transition-scale">
-            </div>
-            <div class="card-body text-center">
-              <h3 class="card-title fw-bold mb-3"><a href="https://srinaya29.github.io/js-mystore/index.html" class="text-decoration-none text-dark hover-orange">Online Store</a></h3>
-              <p class="card-text text-muted">Built an interactive online store using HTML, CSS, and JavaScript with a dynamic cart system. Users can add laptops to the cart, view individual prices, and see real-time total updates.</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Project 4 -->
-        <div class="col-md-6 col-lg-4">
-          <div class="card h-100 shadow-sm border border-2 border-dark rounded-3 overflow-hidden transition-all">
-            <div class="overflow-hidden">
-              <img src="assets/images/project5.jpg" alt="js Image" class="card-img-top rounded-3 transition-scale">
-            </div>
-            <div class="card-body text-center">
-              <h3 class="card-title fw-bold mb-3"><a href="https://srinaya29.github.io/website/index.html" class="text-decoration-none text-dark hover-orange">Virtual Art Gallery</a></h3>
-              <p class="card-text text-muted">Developed a responsive web-based virtual gallery showcasing famous paintings from Italy, Germany, and France. Features artist spotlights, interactive descriptions, and a museum-like experience using HTML, CSS, JavaScript, and Bootstrap.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-        <!-- Skills Section -->
-        <section id="services" class="container my-5">
-          <h1 class="text-center mb-4">Services</h1>
-        
-          <div class="row justify-content-center">
-            <!-- Web Development Card -->
-            <div class="col-md-5 d-flex">
-              <div class="card mb-3 h-100 w-100 d-flex flex-column border border-dark">
-                <img src="assets/images/web-development.jpg" class="card-img-top" alt="Web Development">
-                <div class="card-body text-center d-flex flex-column flex-grow-1">
-                  <h3 class="card-title">Web Development</h3>
-                  <p class="card-text flex-grow-1">
-                    Expertise in HTML, CSS, JavaScript, and Bootstrap for creating responsive and interactive websites.
-                  </p>
+      <section id="projects" class="py-5 bg-light">
+        <div class="container">
+          <h1 class="text-center mb-4">Projects</h1>
+          <div class="row g-4">
+            <!-- Project Cards (5 Projects) -->
+            <!-- Repeatable block pattern -->
+            <!-- Add your project details here -->
+            <!-- Each project is a Bootstrap card component -->
+            <!-- Example for one project, rest follow similar structure -->
+            <!-- MyStore -->
+            <div class="col-md-6 col-lg-4">
+              <div class="card h-100 shadow-sm border border-2 border-dark rounded-3">
+                <img src="assets/images/images.jpeg" class="card-img-top" alt="MyStore" />
+                <div class="card-body text-center">
+                  <h3 class="card-title fw-bold mb-3">
+                    <a href="https://srinaya29.github.io/mystore/index.html" class="text-decoration-none text-dark hover-orange">MyStore</a>
+                  </h3>
+                  <p class="card-text text-muted">Online store showcasing food items with a clean UI for food lovers.</p>
                 </div>
               </div>
             </div>
-        
-            <!-- Backend Development Card -->
-            <div class="col-md-5 d-flex">
-              <div class="card mb-3 h-100 w-100 d-flex flex-column border border-dark">
-                <img src="assets/images/backend-development.jpg" class="card-img-top" alt="Backend Development">
-                <div class="card-body text-center d-flex flex-column flex-grow-1">
-                  <h3 class="card-title">Backend Development</h3>
-                  <p class="card-text flex-grow-1">
-                    Skilled in MySQL, PHP, and Machine Learning for efficient backend development and database management.
-                  </p>
+
+            <!-- MyBank -->
+            <div class="col-md-6 col-lg-4">
+              <div class="card h-100 shadow-sm border border-2 border-dark rounded-3">
+                <img src="assets/images/mybank.jpg" class="card-img-top" alt="MyBank" />
+                <div class="card-body text-center">
+                  <h3 class="card-title fw-bold mb-3">
+                    <a href="https://srinaya29.github.io/bank/index.html" class="text-decoration-none text-dark">MyBank</a>
+                  </h3>
+                  <p class="card-text text-muted">Simple banking demo with login and navigation functionality.</p>
                 </div>
               </div>
             </div>
+
+            <!-- Online Store JS -->
+            <div class="col-md-6 col-lg-4">
+              <div class="card h-100 shadow-sm border border-2 border-dark rounded-3">
+                <img src="assets/images/online-store.jpg" class="card-img-top" alt="Online Store" />
+                <div class="card-body text-center">
+                  <h3 class="card-title fw-bold mb-3">
+                    <a href="https://srinaya29.github.io/js-mystore/index.html" class="text-decoration-none text-dark">Online Store</a>
+                  </h3>
+                  <p class="card-text text-muted">JS-based interactive store with dynamic cart and price updates.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Virtual Art Gallery HTML -->
+            <div class="col-md-6 col-lg-4">
+              <div class="card h-100 shadow-sm border border-2 border-dark rounded-3">
+                <img src="assets/images/project5.jpg" class="card-img-top" alt="Art Gallery HTML" />
+                <div class="card-body text-center">
+                  <h3 class="card-title fw-bold mb-3">
+                    <a href="https://srinaya29.github.io/website/index.html" class="text-decoration-none text-dark">Virtual Art Gallery</a>
+                  </h3>
+                  <p class="card-text text-muted">Museum-like experience showcasing famous European paintings.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Virtual Art Gallery React -->
+            <div class="col-md-6 col-lg-4">
+              <div class="card h-100 shadow-sm border border-2 border-dark rounded-3">
+                <img src="assets/images/project5.jpg" class="card-img-top" alt="Art Gallery React" />
+                <div class="card-body text-center">
+                  <h3 class="card-title fw-bold mb-3">
+                    <a href="https://srinaya29.github.io/react-app-build/index.html" class="text-decoration-none text-dark">React Store</a>
+                  </h3>
+                  <p class="card-text text-muted">Basic store with login, order tracking using React & Context API.</p>
+                </div>
+              </div>
+            </div>
+
           </div>
-        </section>
+        </div>
+      </section>
+
+      <!-- Services Section -->
+      <section id="services" class="container my-5">
+        <h1 class="text-center mb-4">Services</h1>
+        <div class="row justify-content-center">
+          <div class="col-md-5 d-flex">
+            <div class="card mb-3 h-100 w-100 border border-dark">
+              <img src="assets/images/web-development.jpg" class="card-img-top" alt="Web Development">
+              <div class="card-body text-center">
+                <h3 class="card-title">Web Development</h3>
+                <p class="card-text">HTML, CSS, JS, Bootstrap for responsive, modern websites.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-5 d-flex">
+            <div class="card mb-3 h-100 w-100 border border-dark">
+              <img src="assets/images/backend-development.jpg" class="card-img-top" alt="Backend Development">
+              <div class="card-body text-center">
+                <h3 class="card-title">Backend Development</h3>
+                <p class="card-text">Skilled in MySQL, PHP & ML for secure backend systems.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <!-- About Section -->
-      <section id="about" class="row">
-        <h1>About Me</h1>
-        <p>Experienced Full Stack Developer specializing in MERN & Python stacks.</p>
+      <section id="about" class="py-5 bg-light">
+        <div class="container">
+          <h1 class="text-center">About Me</h1>
+          <p class="text-center">Experienced Full Stack Developer specializing in MERN & Python stacks.</p>
+        </div>
       </section>
 
       <!-- Contact Section -->
-      <section id="contact" class="row section-bg">
-        <h1>Contact</h1>
-        <div class="contact-wrapper">
-          <div class="box">
-            <h3>Get in Touch</h3>
-            <form id="contact-form">
-              <input type="text" placeholder="Your Name" required />
-              <input type="email" placeholder="Your Email" required />
-              <textarea rows="5" placeholder="Your Message" required></textarea>
-              <button type="submit" class="btn-primary">Send Message</button>
-            </form>
-          </div>
-          <div class="box">
-            <h3>Contact Details</h3>
-            <p><b>Email:</b> sydugarisrinaya@gmail.com</p>
-            <p><b>Phone:</b> +91 987 654 3210</p>
-            <p><b>Location:</b> Telangana, India</p>
-            <div class="social-links">
-              <a href="https://www.linkedin.com/in/sydugari-srinaya-128130301/"><i class="fab fa-linkedin"></i></a>
-              <a href="https://github.com/srinaya29"><i class="fab fa-github"></i></a>
-              <a href="#"><i class="fab fa-twitter"></i></a>
+      <section id="contact" class="py-5">
+        <div class="container">
+          <h1 class="text-center mb-4">Contact</h1>
+          <div class="row">
+            <div class="col-md-6">
+              <h3>Get in Touch</h3>
+              <form id="contact-form">
+                <input type="text" class="form-control mb-2" placeholder="Your Name" required />
+                <input type="email" class="form-control mb-2" placeholder="Your Email" required />
+                <textarea class="form-control mb-2" rows="5" placeholder="Your Message" required></textarea>
+                <button type="submit" class="btn btn-primary">Send Message</button>
+              </form>
+            </div>
+            <div class="col-md-6">
+              <h3>Contact Details</h3>
+              <p><b>Email:</b> sydugarisrinaya@gmail.com</p>
+              <p><b>Phone:</b> +91 987 654 3210</p>
+              <p><b>Location:</b> Telangana, India</p>
+              <div class="social-links mt-3">
+                <a href="https://www.linkedin.com/in/sydugari-srinaya-128130301/" class="me-3"><i class="fab fa-linkedin fa-lg"></i></a>
+                <a href="https://github.com/srinaya29" class="me-3"><i class="fab fa-github fa-lg"></i></a>
+                <a href="#"><i class="fab fa-twitter fa-lg"></i></a>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- Footer Section -->
-      <!-- Footer Section -->
-      <footer>
-        <p>&copy; 2024. All rights reserved.</p>
+      <!-- Footer -->
+      <footer class="text-center py-3 bg-dark text-light mt-4">
+        <p>&copy; 2024 Srinaya. All rights reserved.</p>
       </footer>
-
-
     </div>
 
+    <!-- Dark/Light Mode Script -->
+    <script>
+      function toggleTheme() {
+        document.body.classList.toggle('dark-mode');
+        localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
+      }
 
-     <!-- Bootstrap JS -->
-     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-     <script>
-         // Dark/Light Mode Toggle
-        // Dark/Light Mode Toggle
-        function toggleTheme() {
-            document.body.classList.toggle('dark-mode');
-            
-            // Store user preference in localStorage
-            if (document.body.classList.contains('dark-mode')) {
-                localStorage.setItem('theme', 'dark');
-            } else {
-                localStorage.setItem('theme', 'light');
-            }
+      document.addEventListener('DOMContentLoaded', () => {
+        if (localStorage.getItem('theme') === 'dark') {
+          document.body.classList.add('dark-mode');
         }
-
-        // Apply the saved theme when the page loads
-        document.addEventListener('DOMContentLoaded', () => {
-            if (localStorage.getItem('theme') === 'dark') {
-                document.body.classList.add('dark-mode');
-            }
-        });
-
-     </script>
+      });
+    </script>
   </body>
 </html>
