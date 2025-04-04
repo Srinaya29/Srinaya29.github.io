@@ -33,7 +33,7 @@
               <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
               <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
             </ul>
-            <button class="theme-toggle ms-3" onclick="toggleTheme()">🌓</button>
+           <!-- <button class="theme-toggle ms-3" onclick="toggleTheme()">🌓</button>-->
           </div>
         </div>
       </nav>
@@ -59,7 +59,7 @@
       <!-- Projects Section -->
       <section id="projects" class="py-5 bg-light">
         <div class="container">
-          <h1 class="text-center mb-4">Projects</h1>
+          <h1 class="text-center mb-4 text-light">Projects</h1>
           <div class="row g-4">
             <!-- Project Cards (5 Projects) -->
             <!-- Repeatable block pattern -->
@@ -74,7 +74,7 @@
                   <h3 class="card-title fw-bold mb-3">
                     <a href="https://srinaya29.github.io/mystore/index.html" class="text-decoration-none text-dark hover-orange">MyStore</a>
                   </h3>
-                  <p class="card-text text-muted">Online store showcasing food items with a clean UI for food lovers.</p>
+                  <p class="card-text text-light">Online store showcasing food items with a clean UI for food lovers.</p>
                 </div>
               </div>
             </div>
@@ -87,7 +87,7 @@
                   <h3 class="card-title fw-bold mb-3">
                     <a href="https://srinaya29.github.io/bank/index.html" class="text-decoration-none text-dark">MyBank</a>
                   </h3>
-                  <p class="card-text text-muted">Simple banking demo with login and navigation functionality.</p>
+                  <p class="card-text text-light">Simple banking demo with login and navigation functionality.</p>
                 </div>
               </div>
             </div>
@@ -100,7 +100,7 @@
                   <h3 class="card-title fw-bold mb-3">
                     <a href="https://srinaya29.github.io/js-mystore/index.html" class="text-decoration-none text-dark">Online Store</a>
                   </h3>
-                  <p class="card-text text-muted">JS-based interactive store with dynamic cart and price updates.</p>
+                  <p class="card-text text-light">JS-based interactive store with dynamic cart and price updates.</p>
                 </div>
               </div>
             </div>
@@ -113,7 +113,7 @@
                   <h3 class="card-title fw-bold mb-3">
                     <a href="https://srinaya29.github.io/website/index.html" class="text-decoration-none text-dark">Virtual Art Gallery</a>
                   </h3>
-                  <p class="card-text text-muted">Museum-like experience showcasing famous European paintings.</p>
+                  <p class="card-text text-light">Museum-like experience showcasing famous European paintings.</p>
                 </div>
               </div>
             </div>
@@ -126,7 +126,7 @@
                   <h3 class="card-title fw-bold mb-3">
                     <a href="https://srinaya29.github.io/react-app-build/index.html" class="text-decoration-none text-dark">React Store</a>
                   </h3>
-                  <p class="card-text text-muted">Basic store with login, order tracking using React & Context API.</p>
+                  <p class="card-text text-light">Basic store with login, order tracking using React & Context API.</p>
                 </div>
               </div>
             </div>
@@ -163,7 +163,7 @@
       <!-- About Section -->
       <section id="about" class="py-5 bg-light">
         <div class="container">
-          <h1 class="text-center">About Me</h1>
+          <h1 class="text-center text-light">About Me</h1>
           <p class="text-center">Experienced Full Stack Developer specializing in MERN & Python stacks.</p>
         </div>
       </section>
@@ -198,23 +198,9 @@
       </section>
 
       <!-- Footer -->
-      <footer class="text-center py-3 bg-dark text-light mt-4">
+      <footer class="text-center py-3 text-light mt-4">
         <p>&copy; 2024 Srinaya. All rights reserved.</p>
       </footer>
     </div>
-
-    <!-- Dark/Light Mode Script -->
-    <script>
-      function toggleTheme() {
-        document.body.classList.toggle('dark-mode');
-        localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
-      }
-
-      document.addEventListener('DOMContentLoaded', () => {
-        if (localStorage.getItem('theme') === 'dark') {
-          document.body.classList.add('dark-mode');
-        }
-      });
-    </script>
   </body>
 </html>
