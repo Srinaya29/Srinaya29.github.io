@@ -100,30 +100,83 @@ html, body {
   text-align: center;
 }
 
-/* Contact Section */
+/* contact - dark mode */
 #contact {
-  background-color: #121212;
-  color: #ffffff;
+  background-color: #000; /* black background */
+  color: #fff; /* white text */
 }
 
-#contact input, #contact textarea {
-  background-color: #1e1e1e;
-  color: #ffffff;
-  border: 1px solid #ffffff;
+#contact .contact {
+  flex-direction: column;
+  padding: 100px 0;
+  align-items: center;
+  justify-content: center;
+  min-width: 20vh;
 }
 
-#contact .btn-primary {
-  background-color: #f39c12;
-  color: #000;
+#contact .section-title {
+  color: #fff;
 }
 
-#contact .btn-primary:hover {
-  background-color: #ff6347;
+#contact .section-title span {
+  color: #00adb5; /* accent color for "info" */
 }
 
-#contact .social-links a {
-  color: #f39c12 !important;
+#contact .contact-items {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin: 0;
 }
+
+#contact .contact-item {
+  width: 30%;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #111; /* subtle dark background */
+  padding: 20px;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#contact .contact-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(0, 173, 181, 0.6);
+}
+
+#contact .contact-item .icon {
+  height: 100px;
+  width: 100px;
+  flex-shrink: 0;
+}
+
+#contact .contact-item .icon img {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
+
+#contact .contact-item .contact-info {
+  width: 100%;
+  text-align: left;
+  padding-left: 20px;
+}
+
+#contact .contact-item .contact-info h1 {
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+#contact .contact-item .contact-info h2 {
+  color: #00adb5;
+  word-break: break-word;
+}
+/* End contact */
+
+
 
 /* Fix Any Remaining White Areas */
 .section-title, .content-box, .form-control {
@@ -132,15 +185,55 @@ html, body {
   border: 1px solid #222 !important;
 }
 
-/* Footer */
-footer {
-  background-color: #000000;
-  color: white;
-  text-align: center;
-  padding: 20px 0;
-  width: 100%;
-  margin-top: auto;
+/* Dark Mode Footer */
+#footer {
+  background-color: #000; /* pure black background */
+  border-top: 2px solid #0ef; /* optional neon accent */
 }
+
+#footer .brand h1 {
+  font-size: 2.5rem;
+  color: white;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+#footer .brand h1 span {
+  color: #0ef;
+}
+
+#footer .social-icon {
+  display: flex;
+  justify-content: center;
+  gap: 30px; /* Increased gap for better alignment */
+  margin-bottom: 25px;
+}
+
+#footer .social-item {
+  height: 60px; /* Larger area for better clickability */
+  width: 60px;  /* Larger icons */
+}
+
+#footer .social-icon-img {
+  width: 100%; /* Ensures images are responsive */
+  height: 100%;
+  object-fit: contain;
+  filter: grayscale(1) brightness(1.1);
+  transition: 0.3s ease filter;
+}
+
+#footer .social-item:hover .social-icon-img {
+  filter: grayscale(0) brightness(1.5);
+}
+
+#footer p {
+  color: #bbb;
+  font-size: 1.1rem;
+  margin-top: 40px; /* Makes sure the copyright text stays at the bottom */
+}
+
+
+
 
 /* Fixing Scrollbars */
 body::-webkit-scrollbar {
