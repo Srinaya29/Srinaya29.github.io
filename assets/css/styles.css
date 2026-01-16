@@ -1,250 +1,94 @@
-/* Apply Dark Mode Globally */
-html, body {
-  background-color: #000000 !important;
-  color: #ffffff !important;
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  min-height: 100vh;
-  overflow-x: hidden; /* Prevents unwanted horizontal scroll */
-  display: flex;
-  flex-direction: column;
-  font-family: 'Arial', sans-serif;
-  line-height: 1.6;
+ body {
+    display: flex;              /* Makes children sit side by side */
+    flex-direction: column;     /* On small screens: stack vertically */
+    min-height: 100vh;          /* Full screen height */
+    margin: 0;                  /* Remove default space */
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;  /* Light gray background */
 }
 
-/* Ensure All Containers and Sections Are Dark */
-.container, section, div {
-  background-color: #000000 !important;
-  color: #ffffff !important;
-  border: none;
-  width: 100%;
-  margin: 0;
-  padding: 0;
+aside.sidebar {
+    background-color: #bd5d38;  /* Orange-brown color */
+    color: white;
+    padding: 40px 30px;         /* Space inside */
+    text-align: left;         /* Center everything */
 }
 
-/* Navbar */
-.navbar {
-  background-color: #000000 !important;
-  padding: 10px 0;
+main {
+    padding: 60px 40px;         /* Space inside main area */
+    flex: 1;                    /* Takes remaining space */
 }
-
-.navbar-brand {
-  font-size: 1.5rem;
+ @media (min-width: 992px) {
+  body {
+    flex-direction: row;   /* Sidebar left, main right */
+  }
+  aside.sidebar {
+    width: 350px;
+    min-height: 100vh;
+    text-align: center;      /* Align text left on desktop */
+  }
+  main {
+    flex: 1;
+  }
+}
+.name{
+  font-size: 50px;
   font-weight: bold;
-  color: #fff;
-}
-
-.navbar-brand:hover,
-.navbar-nav .nav-link:hover {
-  color: #f39c12;
-}
-
-.navbar-nav .nav-link {
-  color: #fff;
-  font-size: 1rem;
-  padding: 10px 15px;
-  transition: color 0.3s ease-in-out;
-}
-
-/* Sections */
-#home, #projects, #services, #about, #contact {
-  background-color: #000000 !important;
-  padding: 100px 0;
-}
-
-/* Home Section */
-#home h1, #home p {
-  color: #ffffff;
-}
-
-/* Projects Section */
-#projects {
-  background-color: #121212;
-}
-
-#projects .card {
-  background-color: #000000;
-  border: 2px solid #ddd !important;
-  color: #ffffff;
-}
-
-.card-title a {
-  color: #ffffff !important;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.card-title a:hover {
-  color: #f37f12 !important;
-}
-
-.card-text {
-  color: #cccccc !important;
-}
-
-/* Services Section */
-#services .card {
-  background-color: #000000;
-  border: 2px solid #ddd !important;
-  color: #ffffff;
-}
-
-#services h1 {
-  color: #ffffff;
-}
-
-/* About Section */
-#about {
-  background-color: #121212;
-  text-align: center;
-}
-
-/* contact - dark mode */
-#contact {
-  background-color: #000; /* black background */
-  color: #fff; /* white text */
-}
-
-#contact .contact {
-  flex-direction: column;
-  padding: 100px 0;
-  align-items: center;
-  justify-content: center;
-  min-width: 20vh;
-}
-
-#contact .section-title {
-  color: #fff;
-}
-
-#contact .section-title span {
-  color: #00adb5; /* accent color for "info" */
-}
-
-#contact .contact-items {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  margin: 0;
-}
-
-#contact .contact-item {
-  width: 30%;
-  margin: 0;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  background-color: #111; /* subtle dark background */
-  padding: 20px;
-  border-radius: 10px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-#contact .contact-item:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 20px rgba(0, 173, 181, 0.6);
-}
-
-#contact .contact-item .icon {
-  height: 100px;
-  width: 100px;
-  flex-shrink: 0;
-}
-
-#contact .contact-item .icon img {
-  object-fit: contain;
-  width: 100%;
-  height: 100%;
-}
-
-#contact .contact-item .contact-info {
-  width: 100%;
-  text-align: left;
-  padding-left: 20px;
-}
-
-#contact .contact-item .contact-info h1 {
-  color: #fff;
-  margin-bottom: 10px;
-}
-
-#contact .contact-item .contact-info h2 {
-  color: #00adb5;
-  word-break: break-word;
-}
-/* End contact */
-
-
-
-/* Fix Any Remaining White Areas */
-.section-title, .content-box, .form-control {
-  background-color: #000000 !important;
-  color: #ffffff !important;
-  border: 1px solid #222 !important;
-}
-
-/* Dark Mode Footer */
-#footer {
-  background-color: #000; /* pure black background */
-  border-top: 2px solid #0ef; /* optional neon accent */
-}
-
-#footer .brand h1 {
-  font-size: 2.5rem;
-  color: white;
-  letter-spacing: 2px;
   margin-bottom: 20px;
 }
-
-#footer .brand h1 span {
-  color: #0ef;
+.name-first { color: #333; }         /* Dark color */
+.name-last  { color: #bd5d38; }
+.profile-img {
+   width: 200px;
+    height: 200px;
+    border-radius: 50%;  
+    object-fit: cover;            /* Circle shape */
+    border: 6px solid rgba(255,255,255,0.3);
+    margin-bottom: 30px;
+    display: block;
+    margin: 0 auto 30px auto;  /* Centers it horizontally + bottom space */
+}
+.nav-links {
+    list-style: none;          /* Remove bullets */
+    padding: 0;
+    margin: 0;
+}
+.nav-links a{
+  display: block;
+  color: white;
+  font-size: 20px;
+  padding: 12px 0;
+  text-decoration: none;
+}
+.nav-links a:hover,
+.nav-links a.active {
+    color: #f8d7b0;             /* Lighter color on hover */
+}
+.social {
+    display: flex;
+    gap: 15px;
+    margin-top: 50px;
+    justify-content: center;    /* Center on mobile */
 }
 
-#footer .social-icon {
-  display: flex;
-  justify-content: center;
-  gap: 30px; /* Increased gap for better alignment */
-  margin-bottom: 25px;
+.social a {
+    width: 40px;
+    height: 40px;
+    background: #333;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
 }
 
-#footer .social-item {
-  height: 60px; /* Larger area for better clickability */
-  width: 60px;  /* Larger icons */
+.social a:hover {
+    background: #f8d7b0;
+    color: #bd5d38;
 }
 
-#footer .social-icon-img {
-  width: 100%; /* Ensures images are responsive */
-  height: 100%;
-  object-fit: contain;
-  filter: grayscale(1) brightness(1.1);
-  transition: 0.3s ease filter;
-}
-
-#footer .social-item:hover .social-icon-img {
-  filter: grayscale(0) brightness(1.5);
-}
-
-#footer p {
-  color: #bbb;
-  font-size: 1.1rem;
-  margin-top: 40px; /* Makes sure the copyright text stays at the bottom */
-}
-
-
-
-
-/* Fixing Scrollbars */
-body::-webkit-scrollbar {
-  width: 8px;
-}
-
-body::-webkit-scrollbar-thumb {
-  background: #555;
-  border-radius: 10px;
-}
-
-body::-webkit-scrollbar-track {
-  background: #222;
+@media (min-width: 992px) {
+    .social { justify-content: flex-start; }
+    aside.social{ align-items: center;}
 }

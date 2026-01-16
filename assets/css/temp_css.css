@@ -1,0 +1,244 @@
+/* Apply Dark Mode Globally */
+html, body {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;  /* Prevents unwanted horizontal scroll */
+  display: flex;
+  flex-direction: column;
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+}
+
+/* Ensure All Containers and Sections Are Dark */
+.container, section, div {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+  border: none;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #000000 !important;
+  padding: 10px 0;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.navbar-brand:hover,
+.navbar-nav .nav-link:hover {
+  color: #f39c12;
+}
+
+.navbar-nav .nav-link {
+  color: #fff;
+  font-size: 1rem;
+  padding: 10px 15px;
+  transition: color 0.3s ease-in-out;
+}
+
+/* Sections */
+#home, #projects, #services, #about, #contact {
+  background-color: #000000 !important;
+  padding: 100px 0;
+}
+
+/* Home Section */
+#home h1, #home p {
+  color: #ffffff;
+}
+
+/* Projects Section */
+#projects {
+  background-color: #121212;
+}
+
+#projects .card {
+  background-color: #000000;
+  border: 2px solid #ddd !important;
+  color: #ffffff;
+}
+
+.card-title a {
+  color: #ffffff !important;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.card-title a:hover {
+  color: #f37f12 !important;
+}
+
+.card-text {
+  color: #cccccc !important;
+}
+
+/* Services Section */
+#services .card {
+  background-color: #000000;
+  border: 2px solid #ddd !important;
+  color: #ffffff;
+}
+
+#services h1 {
+  color: #ffffff;
+}
+
+/* About Section */
+#about {
+  background-color: #121212;
+  text-align: center;
+}
+
+/* Contact Section - Dark Mode */
+#contact {
+  background-color: #000; /* Pure black background */
+  color: #fff; /* White text */
+}
+
+#contact .contact {
+  flex-direction: column;
+  padding: 100px 0;
+  align-items: center;
+  justify-content: center;
+  min-height: 20vh; /* Changed from min-width to min-height for better layout intent */
+}
+
+#contact .section-title {
+  color: #fff;
+}
+
+#contact .section-title span {
+  color: #00adb5; /* Accent color for "info" */
+}
+
+#contact .contact-items {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin: 0;
+}
+
+#contact .contact-item {
+  width: 30%;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #111; /* Subtle dark background */
+  padding: 20px;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#contact .contact-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(0, 173, 181, 0.6);
+}
+
+#contact .contact-item .icon {
+  height: 100px;
+  width: 100px;
+  flex-shrink: 0;
+}
+
+#contact .contact-item .icon img {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
+
+#contact .contact-item .contact-info {
+  width: 100%;
+  text-align: left;
+  padding-left: 20px;
+}
+
+#contact .contact-item .contact-info h1 {
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+#contact .contact-item .contact-info h2 {
+  color: #00adb5;
+  word-break: break-word;
+}
+
+/* Fix Any Remaining White Areas */
+.section-title, .content-box, .form-control {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+  border: 1px solid #222 !important;
+}
+
+/* Dark Mode Footer */
+#footer {
+  background-color: #000; /* Pure black background */
+  border-top: 2px solid #0ef; /* Optional neon accent */
+}
+
+#footer .brand h1 {
+  font-size: 2.5rem;
+  color: white;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+#footer .brand h1 span {
+  color: #0ef;
+}
+
+#footer .social-icon {
+  display: flex;
+  justify-content: center;
+  gap: 30px; /* Increased gap for better alignment */
+  margin-bottom: 25px;
+}
+
+#footer .social-item {
+  height: 60px; /* Larger area for better clickability */
+  width: 60px; /* Larger icons */
+}
+
+#footer .social-icon-img {
+  width: 100%; /* Ensures images are responsive */
+  height: 100%;
+  object-fit: contain;
+  filter: grayscale(1) brightness(1.1);
+  transition: 0.3s ease filter;
+}
+
+#footer .social-item:hover .social-icon-img {
+  filter: grayscale(0) brightness(1.5);
+}
+
+#footer p {
+  color: #bbb;
+  font-size: 1.1rem;
+  margin-top: 40px; /* Makes sure the copyright text stays at the bottom */
+}
+
+/* Custom Scrollbars */
+body::-webkit-scrollbar {
+  width: 8px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #555;
+  border-radius: 10px;
+}
+
+body::-webkit-scrollbar-track {
+  background: #222;
+}

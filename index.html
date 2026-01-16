@@ -3,234 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - Resume</title>
-
-    <!-- Font Awesome for social icons -->
+    <link rel="stylesheet" href="assets/css/styles.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
-    <style>
-        /* Reset & Base */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f8f9fa;
-            color: #333;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
-
-        /* Sidebar */
-        .sidebar {
-            background-color: #bd5d38; /* Exact orange-brown */
-            color: #fff;
-            padding: 3rem 2rem;
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        .profile-img {
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 6px solid rgba(255, 255, 255, 0.3);
-            margin-bottom: 2rem;
-        }
-        .name {
-            font-size: 3rem;
-            font-weight: bold;
-            margin-bottom: 1rem;
-        }
-        .name-first {
-            color: #343a40;
-        }
-        .name-last {
-            color: #bd5d38;
-        }
-        .contact-info {
-            font-size: 1.1rem;
-            margin-bottom: 2rem;
-            color: #343a40;
-        }
-        .email-link {
-            color: #bd5d38;
-            text-decoration: underline;
-        }
-        .sidebar hr {
-            width: 100%;
-            border: none;
-            border-top: 1px solid rgba(255, 255, 255, 0.5);
-            margin: 2rem 0;
-        }
-        .sidebar-nav {
-            list-style: none;
-            width: 100%;
-            margin-bottom: auto;
-        }
-        .sidebar-nav a {
-            display: block;
-            color: #fff;
-            font-size: 1.2rem;
-            padding: 0.8rem 0;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-        .sidebar-nav a:hover,
-        .sidebar-nav a.active {
-            color: #f8d7b0;
-        }
-        .social-icons {
-            display: flex;
-            gap: 15px;
-            margin-top: 3rem;
-        }
-        .social-icons a {
-            width: 40px;
-            height: 40px;
-            background-color: #fff;
-            color: #343a40;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.3rem;
-            transition: all 0.3s;
-        }
-        .social-icons a:hover {
-            background-color: #f8d7b0;
-            color: #bd5d38;
-        }
-
-        /* Main Content */
-        main {
-            flex: 1;
-            padding: 4rem 3rem;
-            max-width: 900px;
-            margin: 0 auto;
-            width: 100%;
-        }
-        .section-heading {
-            color: #bd5d38;
-            font-size: 2rem;
-            display: inline-block;
-            border-bottom: 3px solid #bd5d38;
-            padding-bottom: 0.5rem;
-            margin-bottom: 2rem;
-        }
-        .about-text {
-            font-size: 1.2rem;
-            line-height: 1.8;
-            color: #444;
-        }
-
-        /* Desktop Layout (sidebar on left) */
-        @media (min-width: 992px) {
-            body {
-                flex-direction: row;
-            }
-            .sidebar {
-                min-height: 100vh;
-                width: 350px;
-                text-align: left;
-                align-items: flex-start;
-            }
-            .sidebar-nav {
-                width: auto;
-            }
-            main {
-                padding: 5rem;
-            }
-        }
-
-        /* Mobile adjustments */
-        @media (max-width: 991px) {
-            .sidebar {
-                padding: 2rem 1.5rem;
-            }
-            .name {
-                font-size: 2.5rem;
-            }
-            main {
-                padding: 3rem 2rem;
-            }
-        }
-    </style>
+    <title>My Portfolio</title>
 </head>
 <body>
-
-    <!-- Sidebar -->
     <aside class="sidebar">
-        <img src="assets/images/portfolio.jpeg" alt="Your Photo" class="profile-img">
-
-        <h1 class="name">
-            <span class="name-first">Your</span>
-            <span class="name-last">Name</span>
-        </h1>
-
-        <p class="contact-info">
-            Your Address · City, State PIN · (Your Phone) · 
-            <a href="mailto:your@email.com" class="email-link">your@email.com</a>
-        </p>
-
-        <hr>
-
-        <nav>
-            <ul class="sidebar-nav">
-                <li><a href="#about" class="active">About</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#interests">Interests</a></li>
-                <li><a href="#awards">Awards</a></li>
-            </ul>
-        </nav>
-
-        <div class="social-icons">
-            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-            <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
-            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-        </div>
+    <img src="assets/images/portfolio.jpeg" alt="Profile Picture" class="profile-img" />
+    <hr>
+    <nav>
+    <ul class="nav-links">
+        <li><a href="#about" class="active">ABOUT</a></li>
+        <li><a href="#skills">SKILLS</a></li>
+        <li><a href="#interests">INTERESTS</a></li>
+        <li><a href="#projects">PROJECTS</a></li>
+        <li><a href="#contact">CONTACT</a></li>
+    </ul>
+    </nav>
     </aside>
-
-    <!-- Main Content -->
     <main>
-        <section id="about">
-            <h2 class="section-heading">About</h2>
-            <p class="about-text">
-                Write your about paragraph here. For example: "I am a BTech student passionate about web development, with hands-on experience in HTML, CSS, JavaScript, and building responsive layouts from scratch..."
-            </p>
-        </section>
-
-        <!-- Add other sections later here -->
-        <!--
-        <section id="experience">
-            <h2 class="section-heading">Experience</h2>
-            ...
-        </section>
-        -->
+    <section id="about">
+        <h1 class="name">
+    <span class="name-first">Sydugari</span>
+    <span class="name-last">Srinaya</span>
+        </h1>
+        <br></br>
+        <p>Hello! I'm Srinaya, a passionate developer with a love for creating innovative solutions.</p>
+        <p>Passionate technologist skilled in Python, SQL. Proficient in data tools and frameworks. Eager to solve problems and
+        deliver innovative solutions in dynamic, project-driven environments. Committed to mastering new technologies and
+        driving impactful results.
+        </p>
+        <div class="social">
+        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        </div>
+    </section>
     </main>
-
-    <!-- Smooth Scrolling JS -->
-    <script>
-        document.querySelectorAll('.sidebar-nav a').forEach(link => {
-            link.addEventListener('click', function(e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href');
-                const targetSection = document.querySelector(targetId);
-                targetSection.scrollIntoView({ behavior: 'smooth' });
-
-                // Update active class
-                document.querySelectorAll('.sidebar-nav a').forEach(a => a.classList.remove('active'));
-                this.classList.add('active');
-            });
-        });
-    </script>
 </body>
 </html>
