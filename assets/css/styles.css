@@ -92,3 +92,19 @@ main {
     .social { justify-content: flex-start; }
     aside.social{ align-items: center;}
 }
+/* Hide/show sections */
+.section {
+    display: none;
+}
+.section.active {
+    display: block;
+}
+
+/* Nice hover effect for project cards (only affects cards in Projects section) */
+.project-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}

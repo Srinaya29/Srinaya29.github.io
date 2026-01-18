@@ -5,39 +5,223 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/styles.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Bootstrap ONLY for Projects section (won't affect About or sidebar) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
     <title>My Portfolio</title>
 </head>
 <body>
     <aside class="sidebar">
-    <img src="assets/images/portfolio.jpeg" alt="Profile Picture" class="profile-img" />
-    <hr>
-    <nav>
-    <ul class="nav-links">
-        <li><a href="#about" class="active">ABOUT</a></li>
-        <li><a href="#skills">SKILLS</a></li>
-        <li><a href="#interests">INTERESTS</a></li>
-        <li><a href="#projects">PROJECTS</a></li>
-        <li><a href="#contact">CONTACT</a></li>
-    </ul>
-    </nav>
+        <img src="assets/images/portfolio.jpeg" alt="Profile Picture" class="profile-img" />
+        <hr>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#about" class="active">ABOUT</a></li>
+                <li><a href="#skills">SKILLS</a></li>
+                <li><a href="#interests">INTERESTS</a></li>
+                <li><a href="#projects">PROJECTS</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+            </ul>
+        </nav>
     </aside>
+    
     <main>
-    <section id="about">
-        <h1 class="name">
-    <span class="name-first">Sydugari</span>
-    <span class="name-last">Srinaya</span>
-        </h1>
-        <br></br>
-        <p>Hello! I'm Srinaya, a passionate developer with a love for creating innovative solutions.</p>
-        <p>Passionate technologist skilled in Python, SQL. Proficient in data tools and frameworks. Eager to solve problems and
-        deliver innovative solutions in dynamic, project-driven environments. Committed to mastering new technologies and
-        driving impactful results.
-        </p>
-        <div class="social">
-        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-        <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
-        </div>
-    </section>
+        <!-- About Section (visible by default) - your original content unchanged -->
+        <section id="about" class="section active">
+            <h1 class="name">
+                <span class="name-first">Sydugari</span>
+                <span class="name-last">Srinaya</span>
+            </h1>
+            <br></br>
+            <p>Hello! I'm Srinaya, a passionate developer with a love for creating innovative solutions.</p>
+            <p>Passionate technologist skilled in Python, SQL. Proficient in data tools and frameworks. Eager to solve problems and
+            deliver innovative solutions in dynamic, project-driven environments. Committed to mastering new technologies and
+            driving impactful results.
+            </p>
+            <div class="social">
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            </div>
+        </section>
+        
+        <!-- Projects Section (hidden by default) - Now with Bootstrap Tabs for categories -->
+        <section id="projects" class="section">
+                <h1 class="display-4 text-center mb-5 fw-bold" style="color: #bd5d38;">My Projects</h1>
+                
+                <!-- Bootstrap Tabs Navigation -->
+                <ul class="nav nav-tabs justify-content-center mb-5" id="projectTabs" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="web-tab" data-bs-toggle="tab" data-bs-target="#web" type="button" role="tab" style="color: #bd5d38; font-weight: bold;">
+                            Web Development
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="yolov8-tab" data-bs-toggle="tab" data-bs-target="#yolov8" type="button" role="tab" style="color: #bd5d38; font-weight: bold;">
+                            DeepLearning ALGOs
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="llm-tab" data-bs-toggle="tab" data-bs-target="#llm" type="button" role="tab" style="color: #bd5d38; font-weight: bold;">
+                            LLMs & RAGs
+                        </button>
+                    </li>
+                </ul>
+                
+                <!-- Tab Content -->
+                <div class="tab-content" id="projectTabsContent">
+                    
+                    <!-- Web Development Tab -->
+                    <div class="tab-pane fade show active" id="web" role="tabpanel">
+                        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+                            <!-- Add your web dev cards here -->
+                            
+                            <!-- Example Card -->
+                            <div class="col">
+                                <div class="card h-100 shadow-sm border-0 project-card">
+                                    <img src="assets/images/project5.jpg" class="card-img-top" alt="Web project screenshot" style="height: 200px; object-fit: cover;">
+                                    <div class="card-body d-flex flex-column">
+                                        <h5 class="card-title" style="color: #bd5d38;">ArtShowcase</h5>
+                                        <p class="card-text flex-grow-1">An interactive art showcase website built using HTML, CSS, Bootstrap, and JavaScript to display artworks in a clean and responsive layout.</p>
+                                        <div class="mt-auto">
+                                            <a href="https://github.com/Srinaya29/website" class="btn btn-outline-secondary me-2"><i class="bi bi-github"></i> Code</a>
+                                            <a href="https://srinaya29.github.io/website" class="btn btn-primary" style="background-color: #bd5d38; border: none;"><i class="bi bi-box-arrow-up-right"></i> Live Demo</a>
+                                        </div>
+                                        <div class="mt-3">
+                                            <span class="badge bg-secondary">HTML</span>
+                                            <span class="badge bg-secondary">CSS</span>
+                                            <span class="badge bg-secondary">Bootstrap</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card h-100 shadow-sm border-0 project-card">
+                                    <img src="assets/images/mybank.jpg" class="card-img-top" alt="Web project screenshot" style="height: 200px; object-fit: cover;">
+                                    <div class="card-body d-flex flex-column">
+                                        <h5 class="card-title" style="color: #bd5d38;">MyBank</h5>
+                                        <p class="card-text flex-grow-1">A basic banking web application that allows users to deposit, withdraw, and transfer money using email-based login.</p>
+                                        <div class="mt-auto">
+                                            <a href="https://github.com/Srinaya29/bank" class="btn btn-outline-secondary me-2"><i class="bi bi-github"></i> Code</a>
+                                            <a href="https://srinaya29.github.io/bank" class="btn btn-primary" style="background-color: #bd5d38; border: none;"><i class="bi bi-box-arrow-up-right"></i> Live Demo</a>
+                                        </div>
+                                        <div class="mt-3">
+                                            <span class="badge bg-secondary">HTML</span>
+                                            <span class="badge bg-secondary">CSS</span>
+                                            <span class="badge bg-secondary">JavaScript</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card h-100 shadow-sm border-0 project-card">
+                                    <img src="assets/images/online-store.jpg" class="card-img-top" alt="Web project screenshot" style="height: 200px; object-fit: cover;">
+                                    <div class="card-body d-flex flex-column">
+                                        <h5 class="card-title" style="color: #bd5d38;">OnlineStore</h5>
+                                        <p class="card-text flex-grow-1">An online store application built with React and Node.js, featuring product listings, shopping cart functionality, and user authentication.</p>
+                                        <div class="mt-auto">
+                                            <a href="https://github.com/Srinaya29/online-store" class="btn btn-outline-secondary me-2"><i class="bi bi-github"></i> Code</a>
+                                            <a href="https://srinaya29.github.io/online-store" class="btn btn-primary" style="background-color: #bd5d38; border: none;"><i class="bi bi-box-arrow-up-right"></i> Live Demo</a>
+                                        </div>
+                                        <div class="mt-3">
+                                            <span class="badge bg-secondary">HTML</span>
+                                            <span class="badge bg-secondary">CSS</span>
+                                            <span class="badge bg-secondary">JavaScript</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End of example -->
+                            
+                        </div>
+                    </div>
+                    
+                    <!-- YOLOv8 Tab -->
+                    <div class="tab-pane fade" id="yolov8" role="tabpanel">
+                        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+                            <!-- Add your YOLOv8 cards here -->
+                            
+                            <!-- Example Card -->
+                            <div class="col">
+                                <div class="card h-100 shadow-sm border-0 project-card">
+                                    <img src="assets/images/yolov8.jpg" class="card-img-top" alt="YOLOv8 project screenshot" style="height: 200px; object-fit: cover;">
+                                    <div class="card-body d-flex flex-column">
+                                        <h5 class="card-title">Suspicious Activity Detection</h5>
+                                        <p class="card-text flex-grow-1">An AI-based suspicious activity detection system that identifies violent or abnormal behavior from live video using YOLOv8 and sends instant alerts.</p>
+                                        <div class="mt-auto">
+                                            <a href="https://github.com/Srinaya29/Suspicious_activity_detection" class="btn btn-outline-secondary me-2"><i class="bi bi-github"></i> Code</a>
+                                        </div>
+                                        <div class="mt-3">
+                                            <span class="badge bg-secondary">Python</span>
+                                            <span class="badge bg-secondary">YOLOv8</span>
+                                            <span class="badge bg-secondary">OpenCV</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End of example -->
+                            
+                        </div>
+                    </div>
+                    
+                    <!-- LLMs & RAGs Tab -->
+                    <div class="tab-pane fade" id="llm" role="tabpanel">
+                        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+                            <!-- Add your LLM/RAG cards here -->
+                            
+                            <!-- Example Card -->
+                            <div class="col">
+                                <div class="card h-100 shadow-sm border-0 project-card">
+                                    <img src="assets/images/final_architecture.jpg" class="card-img-top" alt="RAG project screenshot" style="object-fit: cover;">
+                                    <div class="card-body d-flex flex-column">
+                                        <h5 class="card-title">AI Interview Preparation</h5>
+                                        <p class="card-text flex-grow-1">Developed an AI-driven interview preparation system that evaluates responses and provides intelligent feedback.</p>
+                                        <div class="mt-auto">
+                                            <a href="https://github.com/Srinaya29/Final_Major_Project" class="btn btn-outline-secondary me-2"><i class="bi bi-github"></i> Code</a>
+                                        </div>
+                                        <div class="mt-3">
+                                            <span class="badge bg-secondary">VectorDB</span>
+                                            <span class="badge bg-secondary">LLMs</span>
+                                            <span class="badge bg-secondary">RAG</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End of example -->
+                            
+                        </div>
+                    </div>
+                    
+                </div>
+            
+        </section>
+        
+        <!-- You can add #skills, #interests, #contact sections later the same way -->
     </main>
+    
+    <!-- Bootstrap JS (required for some components, but safe here) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Simple JS for switching sections (About ↔ Projects etc.) -->
+    <script>
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault(); // Prevent page jump
+                
+                // Update active link
+                document.querySelectorAll('.nav-links a').forEach(l => l.classList.remove('active'));
+                this.classList.add('active');
+                
+                // Switch sections
+                const targetId = this.getAttribute('href').substring(1); // removes #
+                document.querySelectorAll('.section').forEach(sec => sec.classList.remove('active'));
+                const targetSection = document.getElementById(targetId);
+                if (targetSection) {
+                    targetSection.classList.add('active');
+                }
+            });
+        });
+    </script>
 </body>
 </html>
