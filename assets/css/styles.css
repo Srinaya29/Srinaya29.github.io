@@ -108,3 +108,38 @@ main {
     transform: translateY(-10px);
     box-shadow: 0 15px 30px rgba(0,0,0,0.15);
 }
+/* Pure Masonry Responsive Image Grid (No Captions) */
+.gallery-row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+    justify-content: center;
+}
+.gallery-column {
+    flex: 23%;
+    max-width: 23%;
+    padding: 0 8px;
+}
+.gallery-column img {
+    margin-top: 16px;
+    vertical-align: middle;
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    transition: all 0.3s ease;
+}
+.gallery-column img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+    z-index: 2;
+}
+/* Responsive */
+@media screen and (max-width: 1200px) {
+    .gallery-column { flex: 31%; max-width: 31%; }
+}
+@media screen and (max-width: 800px) {
+    .gallery-column { flex: 48%; max-width: 48%; }
+}
+@media screen and (max-width: 600px) {
+    .gallery-column { flex: 100%; max-width: 100%; }
+}
