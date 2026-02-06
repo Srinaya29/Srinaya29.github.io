@@ -143,3 +143,30 @@ main {
 @media screen and (max-width: 600px) {
     .gallery-column { flex: 100%; max-width: 100%; }
 }
+.skill-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #eee;
+}
+
+.skill-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.skill-icon {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+}
+
+/* Optional: match your accent color on hover or something */
+.skill-card h5 {
+    color: #333;
+}
+
+@media (max-width: 576px) {
+    .skill-icon {
+        width: 60px;
+        height: 60px;
+    }
+}
